@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script>
+
+
+ var shape =prompt("enter shape");
+var result ;
+ switch(shape){
+            case "circle":
+                    var r =Number(prompt("enter value of r"));
+                    result =Math.PI*Math.pow(r,2);
+                    alert(result);
+            break;
+            case "triangle" :
+
+                    var b =Number(prompt("enter value of base"))
+                    var h =Number(prompt("enter value of height"))
+
+                    result=0.5*b*h;
+                    alert(result);
+            break;
+
+            case "square" :
+                     var a =Number(prompt("enter value of a"))
+                      result=a*a;
+
+                    alert(result);
+              break;
+              case "rectangle" :
+
+                    var i =Number(prompt("enter value of length"))
+                     var w =Number(prompt("enter value of width"))
+          
+                    result =i*w;
+
+                    alert(result);
+                    break;
+              case "parallelogram":
+                    var b =Number(prompt("enter value of base"))
+                    var h =Number(prompt("enter value of vertical  height"))
+                    result=b*h;
+                    alert(result);
+             break;
+              case "trapezium":
+
+                   var a =Number(prompt("enter value of length1"))
+                   var b =Number(prompt("enter value of length2"))
+
+                   var h =Number(prompt("enter value of vertical  height"))
+
+                   result =0.5*(a+b)*h;
+
+                  alert(result);
+            break;
+            case "ellipse" :
+               var minorAxis=Number(prompt("enter value of minor "))
+                var a = 0.5*minorAxis;
+                var b =0.5*minorAxis;
+                  result =Math.PI*a*b
+                  alert(result);
+            break;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+
+</head>
+<body>
+
+
+
+
+
+
+
+<script>
+var num1=Number(prompt("enter first number"));
+var op=prompt("enter your operator");
+var num2=Number(prompt("enter second number"));
+function cal(){
+
+var result=0;
+switch(op){
+               case "+":
+   
+                    result=  num1+num2;
+                    alert(result);
+               break;
+               case "-":
+
+                      result= num1-num2;
+                      alert(result);
+               break;
+               case "*" :
+                      result=num1*num2;
+                      alert(result);  
+                break;
+                case "/":
+                       alert(result); 
+                        result= num1/num2;
+   
+                 break;
+                 case "%" :
+                         result= num1%num2; 
+                         alert(result); 
+                break;
+
+
+
+
+
+}
+return result;
+
+}
+var res =cal();
+
+while(res){
+
+var otherop= prompt("enter other operator")
+
+var num3=Number(prompt("enter other number"))
+  
+  switch(otherop){
+                case "+":
+   
+                          res=res+num3;
+                          alert (res);
+                          break;
+               case "-":
+
+                         res=res-num3;
+                         alert (res);
+                         break;
+               case "*" :
+                        res=res*num3;
+                        alert (res);
+                         break;
+                case "/":
+                        res=res/num3;
+                        alert (res);
+                         break;
+                case "%" :
+                        res=res%num3;
+                        alert (res);
+                        break;
+
+  }}
+
+
+
+
+
+</script>
+
+</body></html>
+
+
+
