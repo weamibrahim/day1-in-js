@@ -1,0 +1,293 @@
+                                                     methode of object
+
+
+
+1  Object.create()	static method creates a new object
+
+example
+
+const person = {
+    name: "weam",
+  
+  };
+  
+  const me = Object.create(person);
+  
+  me.name = 'nour'; // "name" is a property set on "me", but not on "person"
+ //////////////////////////////////////////////////////////////////////////////////////////////
+
+2 Object.freeze(obj)	static method freezes an object cannot change and remove
+
+const obj = {
+  num: 40
+};
+
+Object.freeze(obj);
+
+obj.num = 33;
+// Throws an error in strict mode
+
+console.log(obj.num);
+// Expected output: 40
+////////////////////////////////////////////////////////////////////////////////////////////////
+3 Object.hasown(obj,prop)	Check if object include property as its own property or not
+example
+const object1 = {
+    num: 40
+  };
+  
+  console.log(Object.hasOwn(object1, 'num'));
+  // Expected output: true
+  
+  console.log(Object.hasOwn(object1, 'toString'));
+  // Expected output: false
+  ///////////////////////////////////////////////////////////////////////////////////////
+
+ 4 Object .is(value1,value2)	static method determines if two values are the same value is samilar to === not ==
+
+ example
+
+ Object.is("weam", "weam"); // true
+ Object.is("weam", "nour"); // false
+//////////////////////////////////////////////////////////////////////////////////////////
+5 Object .isfrozen(obj)	 static method check if an object is frozen.
+example
+
+const object1 = {
+    property1: 42
+  };
+  
+  console.log(Object.isFrozen(object1));
+  // Expected output: false
+  
+  Object.freeze(object1);
+  
+  console.log(Object.isFrozen(object1));
+  // Expected output: true
+
+/////////////////////////////////////////////////////////////////////////////////////
+6     Object.values(object)	Convert object to array
+ example
+
+const object1 = {
+    a: 'weam',
+    b: 1,
+    c: true
+  };
+  
+  console.log(Object.values(object1));
+  // Expected output: Array ["weam", 1, true]
+///////////////////////////////////////////////////////////////////////////////////////////////
+7  Object.seal(obj)	static method seals an object cannot delete
+ 
+example
+
+const object1 = {
+    num: 40
+  };
+  
+  Object.seal(object1);
+  object1.num = 33;
+  console.log(object1.num);
+  // Expected output: 33
+  
+  delete object1.num; // Cannot delete when sealed
+  console.log(object1.num);
+  // Expected output: 33
+
+////////////////////////////////////////////////////////////
+
+8 Object .issealed(obj)	Check if object sealed
+
+example
+
+const object1 = {
+    num: 40
+  };
+  
+  console.log(Object.isSealed(object1));
+  // Expected output: false
+  
+  Object.seal(object1);
+  
+  console.log(Object.isSealed(object1));
+  // Expected output: true
+//////////////////////////////////////////////////////////////////////////
+9 Object.defineProperties(obj.prop)	static method defines new or modifies existing properties directly on an object, returning the object.
+
+example
+
+const object1 = {};
+
+Object.defineProperties(object1, {
+  property1: {
+    value: 42,
+    writable: true
+  },
+  property2: {}
+});
+
+console.log(object1.property1);
+// Expected output: 42
+//////////////////////////////////////////////////////////////
+10 Object.preventExtensions(obj)  static method prevents new properties from ever being added to an object
+const object1 = {};
+
+Object.preventExtensions(object1);
+
+try {
+  Object.defineProperty(object1, 'property1', {
+    value: 42
+  });
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: Cannot define property property1, object is not extensible
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+                                                 methode of Array
+                                                     
+1 Array.concat(array)	method is used to merge two or more arrays. 
+
+example
+  const array1 = [1, 2, 3];
+const array2 = [5, 6, 7];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// Expected output: Array [1,2,3,5,6,7]
+//////////////////////////////////////////////////////////////////
+2 Array.fill(value,start)
+            (value,start,end)
+            (value )	
+Method is used to change value of number in array to value of num ,start from index (start) 
+
+example
+const array1 = [1, 2, 3, 4];
+
+// Fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// Expected output: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// Expected output: Array [1, 5, 5, 5]
+//fill with 7 all
+console.lod(array1.fill(7));
+//Expected output:array[7,7,7,7]
+/////////////////////////////////////////////////////////////////////////////
+3  Array.reverse()	 method reverses an array
+example
+
+const array1 = [1, 2, 3];
+
+const reversed = array1.reverse();
+console.log('reversed:', reversed);
+// Expected output: "reversed:" Array [3,2,1]
+
+///////////////////////////////////////////////////////////////////
+
+
+4  Array.includes()	 method determines if  array includes element search, returning true or false 
+example
+
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+//////////////////////////////////////////////////////////////
+
+5 Arrau.map(new array)	creates a new array contain the results of calling a provided function on every element in the calling array.
+
+example
+
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map(x => x +2);
+
+console.log(map1);
+// Expected output: Array [3, 6, 10, 18]
+
+
+//////////////////////////////////////////////////////////////////////////////////
+6   Array.sort()	method sorts the elements of an array  defualt is acending
+
+example
+
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+///////////////////////////////////////////////
+7 Array.keys()	method returns a new Array , object that contains the keys for each index in the array.
+
+example
+
+const array1 = ['weam', 'nour', 'asmaa'];
+const iterator = array1.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
+
+//////////////////////////////////////////////////////////////////////////
+8 Array.at()	method takes an integer value and returns the item at that index,
+
+example
+
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(array1.at(index));
+// Expected output: " 8"
+////////////////////////////////////////////////////////////
+9 
+Array.every()	method tests if all elements in the array pass the test implemented by the provided function
+
+example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+//////////////////////////////////////////////////////////////////////////////
+10 Array.some()	method tests if at least one element in the array passes the test implemented by the provided function.
+
+example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
