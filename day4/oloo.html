@@ -1,0 +1,79 @@
+<html>
+<head>
+
+
+</head>
+
+<body>
+
+<script>
+    const Person ={
+init(fullname,money,sleep_mode,health_rate){
+
+this.name = fullname;
+this.money=money;
+this.healthrate=health_rate;
+this.mode=sleep_mode;
+
+}
+ ,sleep (hours){
+    
+    if(hours==7){
+        this.mode="happy"
+        console.log(this.mode)
+    }
+    else if(hours<7){
+        this.mode="tired"
+        console.log(this.mode)
+    }
+    else {
+        this.mode="lazy"
+        console.log(this.mode)
+    }
+    }
+    ,eat(meals){
+    
+       switch(meals) {
+       case 3 :
+                this.healthrate=100
+                 console.log(this.healthrate)
+       break ;
+       case 2 :
+                  this.healthrate=75
+                  console.log(this.healthrate)
+        break ;
+       case 1 :
+                 this.healthrate=50
+                  console.log(this.healthrate)
+        break ;
+       }
+    
+    }
+    ,Buy(items){
+    
+    this.money -=10*items
+    console.log(this.money)
+    }
+
+
+
+
+
+    }
+
+
+
+
+
+const person1=Object.create(Person) 
+person1.init("weamibrahim",100,"lazy",70)
+console.log(person1.money)//100
+console.log(person1.Buy(1))//90
+console.log(person1.Buy(2))//70
+console.log(person1.money)//70
+console.log(person1.mode)//lazy
+console.log(person1.sleep(6))//tired
+console.log(person1)
+</script>
+
+</body>

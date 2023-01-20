@@ -1,0 +1,67 @@
+<html>
+<head>
+</head>
+
+<body>
+
+<script>
+function Person (fullname,money,sleep_mode,health_rate){
+return{
+ fullname,
+money,
+health_rate,
+sleep_mode,
+sleep(hours){
+
+if(hours==7){
+    mode="happy"
+    console.log(mode)
+}
+else if(hours<7){
+    mode="tired"
+    console.log(mode)
+}
+else {
+    mode="lazy"
+    console.log(mode)
+}
+}
+,eat(meals){
+
+   switch(meals) {
+   case 3 :
+            healthrate=100
+             console.log(healthrate)
+   break ;
+   case 2 :
+              healthrate=75
+              console.log(healthrate)
+    break ;
+   case 1 :
+             healthrate=50
+              console.log(healthrate)
+    break ;
+   }
+
+}
+,Buy(items){
+
+money -=10*items
+console.log(money)
+}
+
+}}
+
+const person1=Person ("weamibrahim",100,"lazy",70)
+console.log(person1.money)//100
+console.log(person1.Buy(1))//90
+console.log(person1.Buy(2))//70
+console.log(person1.money)//70
+console.log(person1.mode)//lazy
+console.log(person1.sleep(6))//tired
+console.log(person1)
+</script>
+
+</body>
+
+</html>
