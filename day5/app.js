@@ -67,7 +67,7 @@ class Person{
     }
 
 class Employee extends Person{
- 
+         #salary;
     constructor(full_name, money, sleep_mood, salary,
                   id, email, workMood, isManager)
     { 
@@ -76,14 +76,23 @@ class Employee extends Person{
         this.mail = email
         this.workMood = workMood
         this.isManager = isManager
-        this.salary =salary <1000 ? 1000 : salary;
        
+       this.#salary=1000
   
 
             
          }
         
-
+         get salary () {
+            return this.#salary
+          }
+        
+          set salary (value) {
+            if (value < 1000) 
+            {   alert('Sorry Salary must be 1000 at least')
+                this.#salary = this.#salary}
+            else {this.#salary = value}
+          }
         
    
   
