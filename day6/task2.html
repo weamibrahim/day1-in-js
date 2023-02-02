@@ -1,0 +1,69 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+       
+
+<script>
+
+
+
+    class Shape{
+        constructor(side_length,sides,name){
+          this.name=name||"square";
+          this.sides=sides||4;
+          this.side_length=side_length||4;
+        }
+  calcparameter(){
+
+    
+   var result=this.sides*this.side_length;
+   return result;
+    console.log(result);
+  }
+
+
+    }
+ 
+
+class Square extends Shape{
+    constructor(name,side_length,sides)
+    {
+        super(name,sides)}
+
+    clacarea(){
+
+      return this.side_length*this.side_length;
+       
+    }
+
+
+
+
+
+}
+const square=new Square(3);
+console.log(square.clacarea());//9
+console.log(square.calcparameter());//12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</script> 
+
+
+    </body>
+</html>
