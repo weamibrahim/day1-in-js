@@ -1,0 +1,48 @@
+<html>
+    <head></head>
+    <body>
+
+
+<script>
+
+
+
+    class Shape{
+        constructor(name,sides,side_length){
+          this.name=name||"shape";
+          this.sides=sides||3;
+          this.side_length=side_length||4;
+        }
+  calcparameter(){
+
+    
+   var result=this.sides*this.side_length;
+   return result;
+    console.log(result);
+  }
+
+
+    }
+    const shape=new Shape()
+    console.log(shape)//'shape',3,4
+    const sq=new Shape("square",4,5);//20
+    console.log(sq.calcparameter())
+   
+    const tri=new Shape("tringle",3,3);//9
+    console.log(tri.calcparameter())
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
