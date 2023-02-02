@@ -11,10 +11,10 @@
 
 
     class Shape{
-        constructor(side_length,sides,name){
-          this.name=name||"square";
-          this.sides=sides||4;
-          this.side_length=side_length||4;
+        constructor(name,sides,side_length){
+          this.name=name;
+          this.sides=sides;
+          this.side_length=side_length;
         }
   calcparameter(){
 
@@ -29,18 +29,15 @@
  
 
 class Square extends Shape{
-    constructor(name,side_length,sides)
-    {
-        super(name,sides)}
+    constructor(side_length){
+   super("square",4,side_length)
+    }
 
     clacarea(){
 
       return this.side_length*this.side_length;
        
     }
-
-
-
 
 
 }
