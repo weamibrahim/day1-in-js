@@ -1,0 +1,72 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+       
+
+<script>
+
+
+
+
+
+
+
+function Shape(name,sides,side_length){
+       this.name=name||"shape";
+          this.sides=sides||3;
+          this.side_length=side_length||4;
+
+}
+
+ Shape.prototype.calcparameter=function(){
+    var result=this.sides*this.side_length;
+   return result;
+    console.log(result);
+ }
+  
+ function Square(side_length){
+
+    Shape.call(this,"square",4,side_length);
+ }
+Square.prototype=Object.create(Shape.prototype);
+Square.prototype.constructor=Square;
+
+Square.prototype.clacarea=function(){
+    
+    return this.side_length*this.side_length;
+}
+
+
+
+
+
+
+
+
+
+const square=new Square(3);
+console.log(square.clacarea());//9
+console.log(square.calcparameter());//12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</script> 
+
+
+    </body>
+</html>
