@@ -1,7 +1,7 @@
 # tasks of java script
 ## lab1 1
 ### task1
- [task1](https://weamibrahim.github.io/day1-in-js/welcom/welcom.html)
+[https://weamibrahim.github.io/day1-in-js/welcom/welcom.html]
  ### task2
   [task2](https://weamibrahim.github.io/day1-in-js/calculat/cal.html)
 ## lab2 
