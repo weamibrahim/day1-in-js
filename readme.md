@@ -3,7 +3,7 @@
 ### task1
  [task1](https://weamibrahim.github.io/day1-in-js/welcom/welcom.html)
  ### task2
-  [task2](https://weamibrahim.github.io/day1-in-js/ calculat/cal.html)
+  [task2](https://weamibrahim.github.io/day1-in-js/calculat/cal.html)
 ## lab2 
 ### task1
  [task1](https://weamibrahim.github.io/day1-in-js/day2/age/age.html)
