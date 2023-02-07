@@ -1,7 +1,7 @@
 // id for body
 
 var bgbody=document.getElementById("body")
-bgbody.style.backgroundColor="green"
+bgbody.style.backgroundImage='url(4110786-959008197.jpg)'
 
 
 // id button
@@ -20,7 +20,7 @@ btn.onmouseout=function(){
 
 //id for div for form
 var bgform=document.getElementById("container")
-bgform.style.backgroundColor="white"
+bgform.style.backgroundColor="rgba(255, 255, 255,0.1)"
 
 
 
