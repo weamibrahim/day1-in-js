@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                flex-direction: column;
+              align-content:space-around;
+              width: 50px;
+                
+            }
+        </style>
+        </head>
+        <body>
+            <script>
+               
+                var url="https://reqres.in/api/users?page=2"
+                fetch('https://reqres.in/api/users?page=2')
+                .then(function(response){
+
+                 return response.json()
+
+ 
+                })
+             .then(function(json){
+        
+             for(let i=0;i<json.data.length;i++){  
+            //console.log(json.data[i])
+               var eml=document.createElement("h2")
+                eml.innerHTML=json.data[i].email
+                document.body.appendChild(eml)
+                var im=document.createElement("img")
+                 im.src=json.data[i].avatar
+                // console.log(im.src)
+                   document.body.appendChild(im)
+            }
+            }) 
+            </script>
+        </body>
+</html>

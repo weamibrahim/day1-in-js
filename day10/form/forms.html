@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">      
+<link href="forms.css"    rel="stylesheet">
+</head>
+<body id="body">
+
+<h1 style="text-align: center;">Form</h1>
+<div id="container">
+  <form action="text.php"   onsubmit="return onFormSubmit();"                 >
+             <label for="fname">First Name</label>
+             <input type="text"id="na"placeholder="enter your name" required value="">
+             <label for="passward">password</label>
+            <input type="password" name="pass" id="pass"  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  placeholder="plz enter your passward" value="">
+            <input type="submit" id="main" value="Submit">
+  </form>
+</div>
+<div id="message">
+  <h3>Password must contain of :</h3>
+  <p id="capital" class="invalid"> capital uppercase letter</p>
+  <p id="letter" class="invalid"> lowercase letter</p>
+  <p id="number" class="invalid"> number</p> 
+  <p id="length" class="invalid"> at least contain of 8 characters</p>
+</div>
+<script src="forms.js">
+</script>
+</body>
+</html>

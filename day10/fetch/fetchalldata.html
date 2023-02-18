@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+      
+        </style>
+        </head>
+        <body>
+         
+          <table border="4px">
+
+                 <tr>
+
+                   <th> id</th>
+                   <th> email</th>
+                   <th> fname</th>
+                   <th>lname</th>
+                   <th>image </th>
+                </tr>
+
+
+
+          </table>
+           
+    <script>
+           
+             
+
+              var table= document.querySelector("table")
+
+               var url="https://reqres.in/api/users?page=2"
+                fetch('https://reqres.in/api/users?page=2')
+                .then(function(response){
+                return response.json()
+                })
+                
+                .then(function(json){
+                 // console.log(json.data)
+               json.data.forEach(emp=>{
+               let row= document.createElement('tr')
+               Object.values(emp).forEach(text => {
+                let cell=document.createElement('td')
+                let textnode=document.createTextNode(text);
+               cell.appendChild(textnode)
+                 row.appendChild(cell)
+                 })
+                  table.appendChild(row)
+            
+             })
+               document. body.appendChild(table)
+
+            })
+
+                   
+            </script>
+        </body>
+</html>
