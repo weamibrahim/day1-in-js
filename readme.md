@@ -51,7 +51,7 @@
   [https://weamibrahim.github.io/day1-in-js/day8/list.html]
 ## lab9
 ### task1
-  [https://weamibrahim.github.io/day1-in-js/main/day9/alarm/alarm.html
+  [https://weamibrahim.github.io/day1-in-js/day9/alarm/alarm.html]
   ### task2
   [https://weamibrahim.github.io/day1-in-js/day9/slides/slides.html]
 
