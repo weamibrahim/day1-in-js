@@ -33,9 +33,9 @@ function updateTime() {
     else{
         session.innerHTML='AM';
        }
-    if(hour>12){
-        hour=hour-12;
-       }
+//     if(hour>12){
+//         hour=hour-12;
+//        }
     
 
     const realTime = `${hour}:${minutes}:${seconds}`;
