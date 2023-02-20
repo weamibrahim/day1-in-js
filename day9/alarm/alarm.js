@@ -27,7 +27,7 @@ function updateTime() {
     const minutes = formatTime(today.getMinutes());
     const seconds = formatTime(today.getSeconds());
     var session=document.getElementById("sess")
-    if(hour>=12){
+    if(hour>12){
         session.innerHTML='PM';
        }
     else{
