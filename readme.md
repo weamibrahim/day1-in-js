@@ -45,16 +45,25 @@
  ### task2
   [https://weamibrahim.github.io/day1-in-js/day6/task2.html]
 ## lab7
-### task1
+### forms
  [https://weamibrahim.github.io/day1-in-js/day7/forms.html]
  ## lab8
+ ### todolist
   [https://weamibrahim.github.io/day1-in-js/day8/list.html]
 ## lab9
-### task1
+### alarm
   [https://weamibrahim.github.io/day1-in-js/day9/alarm/alarm.html]
-  ### task2
+  ### slide
   [https://weamibrahim.github.io/day1-in-js/day9/slides/slides.html]
 
+## lab10
+###  todolist
+  [https://weamibrahim.github.io/day1-in-js/day10/list/list1.html]
+### form vaildation
+  [https://weamibrahim.github.io/day1-in-js/day10/form/forms.html]
+### fetch image,email
+  [https://weamibrahim.github.io/day1-in-js/day10/fetch/fetchemail%2Cimage.html]
+  
 
 
 
